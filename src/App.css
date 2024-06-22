@@ -1,9 +1,19 @@
 .App-Header {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
 }
 
 .App-Header img {
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
+}
+
+.App-Header h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.App-Header article {
+  width: 60%
 }
