@@ -17,3 +17,53 @@
 .App-Header article {
   width: 60%
 }
+
+.apiText {
+  width: 90%;
+  column-count: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* display: flex; */
+}
+
+.playerRow li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editButton {
+  background-color: rgb(224, 224, 224);
+  border-radius: 7px;
+  border: 1px;
+}
+
+.editButton:hover {
+  background-color: rgb(141, 202, 255);
+}
+
+.removeButton {
+  background-color: transparent;
+  border-radius: 7px;
+  border: .3px solid rgba(0, 0, 0, 0.212);
+}
+
+.removeButton:hover {
+  background-color: red;
+  color: white;
+}
+
+addAPlayer button{
+  background-color: red;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  margin-left: 30px;
+  border-radius: 15px;
+  border: 0;
+}
+
+addAPlayer button:hover {
+  background-color: rgba(255, 0, 0, 0.517);
+}
