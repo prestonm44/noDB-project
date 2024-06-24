@@ -9,13 +9,13 @@ export default function PlayerData() {
         axios.get('https://api.sportsdata.io/v3/nfl/scores/json/PlayersBasic/KC?key=53ac94d7422e4a65b18e03b16aeb7418').then((res) => {
             setTimeout(() => {
                 setPlayer(res.data);
-            }, 1000);
+            }, 0);
         })
     })
 
     const playerList = player.map((play) => 
     <div className="playerRow">
-        <li key={play.Info}>{play.Name}, {play.Position}, {play.College}, {play.Number} 
+        <li key={play.Info}>{play.Name}, {play.Position} 
         <div className="buttonColumn">
         <button className="editButton">Edit</button> <button className="removeButton">Remove</button>
         </div>

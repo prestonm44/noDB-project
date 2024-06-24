@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import './App.css'
 import Header from './components/Header'
 import PlayerData from './components/PlayerData'
