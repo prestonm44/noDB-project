@@ -13,9 +13,9 @@ function App() {
       <div className="apiText">
         <PlayerData />
       </div>
-      <addAPlayer>
+      <div className='addAPlayer'>
         <button className='addPlayer'>Add a player here</button>
-      </addAPlayer>
+      </div>
     </section>
   )
 }

@@ -53,7 +53,7 @@
   color: white;
 }
 
-addAPlayer button{
+.addAPlayer button{
   background-color: red;
   width: 200px;
   height: 50px;
@@ -64,6 +64,6 @@ addAPlayer button{
   border: 0;
 }
 
-addAPlayer button:hover {
+.addAPlayer button:hover {
   background-color: rgba(255, 0, 0, 0.517);
 }
