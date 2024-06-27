@@ -1,7 +1,7 @@
 import { useState } from "react" 
 
 export default function Name(props) {
-
+    const { name, setName } = props.playerName;
     return (
         <>
             {
@@ -14,7 +14,7 @@ export default function Name(props) {
                         }}
                     />
                     :
-                    <h4>{props.playerName}</h4>
+                    <h4>{ name }</h4>
             }   
         </>
     )

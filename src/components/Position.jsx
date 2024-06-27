@@ -1,6 +1,7 @@
 import { useState } from "react" 
 
-export default function Name(props) {
+export default function Position(props) {
+    const { position, setPosition } = props.playerPosition;
 
     return (
         <>
@@ -8,13 +9,13 @@ export default function Name(props) {
                 props.isEditable ?
                     <input  
                         type="text"
-                        value={position}
+                        value={props.playerPosition}
                         onChange={(e) => {
                             setPosition(e.target.value)
                         }}
                     />
                     :
-                    <h4>{position}</h4>
+                    <h4>{ position }</h4>
             }   
         </>
     )
