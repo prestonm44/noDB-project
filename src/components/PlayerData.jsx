@@ -39,6 +39,15 @@ export default function PlayerData() {
     }, []); // Empty dependency array to run only once on component mount
 
     
+    const addNewPlayer = () =>  {
+        const newPlayer = {
+            PlayerID: player.length ? player[player.length - 1].PlayerID + 1 : 1,
+            Name: "New Player", 
+            Position: "New Position"
+        }
+        setPlayer([...player, newPlayer]);
+    }
+    
     const deleteCard = (playerID) => {
         setPlayer(player.filter(play => play.PlayerID !== playerID));
     };
@@ -48,6 +57,14 @@ export default function PlayerData() {
     ));
 
     return (
+        <>
         <ul>{playerList}</ul>
+        <div className='addAPlayer'>
+        <button 
+            className='addPlayer'
+            onClick={addNewPlayer}
+            >Add a player here</button>
+      </div>
+        </>
     );
 }
