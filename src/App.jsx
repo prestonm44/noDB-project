@@ -5,7 +5,15 @@ import Header from './components/Header'
 import PlayerData from './components/PlayerData'
 
 
-function App() {
+export default function App() {
+  const [chiefPlayerData, setChiefPlayerData] = useState([])
+
+  useEffect(() => {
+    axios.get('/chiefPlayer').then(res => {
+      setChiefPlayerData(res.data)
+    })
+  }, [])
+
 
   return (
     <section>
@@ -17,4 +25,3 @@ function App() {
   )
 }
 <script type="module" src="main.jsx"></script>
-export default App
