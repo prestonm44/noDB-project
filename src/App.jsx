@@ -7,6 +7,15 @@ import PlayerData from './components/PlayerData'
 
 function App() {
 
+  const deleteCard = (id) => {
+    const newData = {...PlayerData};
+
+    const index = newData.PlayerData.findIndex((row) => {
+      return row.id === id
+    })
+
+  }
+
   return (
     <section>
       <Header />

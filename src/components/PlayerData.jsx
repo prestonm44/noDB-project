@@ -38,8 +38,13 @@ export default function PlayerData() {
             .catch((error) => console.error('Error fetching player data:', error));
     }, []); // Empty dependency array to run only once on component mount
 
+    
+    const deleteCard = (playerID) => {
+        setPlayer(player.filter(play => play.PlayerID !== playerID));
+    };
+
     const playerList = player.map((play) => (
-        <PlayerRow key={player.PlayerID} player={play} />
+        <PlayerRow key={play.PlayerID} player={play} deleteCard={deleteCard} />
     ));
 
     return (

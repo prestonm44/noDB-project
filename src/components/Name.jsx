@@ -7,8 +7,8 @@ export default function Name(props) {
             {
                 props.isEditable ?
                     <input  
+                        value={ name }
                         type="text"
-                        value={props.playerName}
                         onChange={(e) => {
                             setName(e.target.value)
                         }}

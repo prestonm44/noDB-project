@@ -1,18 +1,20 @@
 import { useState } from "react"
 import Name from "./Name";
 import Position from "./Position";
+import Buttons from "./Buttons";
 
 
 
-export default function PlayerRow(props) {
+
+export default function PlayerRow({ player, deleteCard }) {
     ///Create state for each key///
     const [isEditable, setIsEditable] = useState(false)
-    const [ name, setName ] = useState (props.player.Name)
-    const [ position, setPosition ] = useState (props.player.Position)
+    const [ name, setName ] = useState (player.Name)
+    const [ position, setPosition ] = useState (player.Position)
 
     return (
         <div className="playerRow">
-        <li key={props.player.Info}> 
+        <li key={player.PlayerID}> 
 
             <Name 
             playerName={{ name, setName }}
@@ -25,7 +27,18 @@ export default function PlayerRow(props) {
             />
 
         <div className="buttonColumn">
-        <button className="editButton">Edit</button> <button className="removeButton">Remove</button>
+            <button 
+                className="editButton"
+                onClick={() => setIsEditable(!isEditable)}
+            >
+                {isEditable? 'Save' : 'Edit'}
+                </button> 
+            <button 
+                className="removeButton"
+                onClick={() => deleteCard(player.PlayerID)}
+                >
+                    Remove
+            </button>
         </div>
         </li>
         </div>

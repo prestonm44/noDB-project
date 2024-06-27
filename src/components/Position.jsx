@@ -9,7 +9,7 @@ export default function Position(props) {
                 props.isEditable ?
                     <input  
                         type="text"
-                        value={props.playerPosition}
+                        value={ position }
                         onChange={(e) => {
                             setPosition(e.target.value)
                         }}
